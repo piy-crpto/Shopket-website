@@ -16,7 +16,7 @@ import express from 'express'
    dotenv.config();
 const app = express();
 
-const PORT = process.env.PORT || 8000;
+const PORT =  8000;
 
  
 
@@ -28,14 +28,15 @@ const PORT = process.env.PORT || 8000;
 //  Connection(USERNAME,PASSWORD);
 
 
-const URL =  process.env.MONGODB_URI || `mongodb+srv://${USERNAME}:${PASSWORD}@commerceweb.4avmsvr.mongodb.net/?retryWrites=true&w=majority`
-Connection(URL);
+// const URL =  process.env.MONGODB_URI || `mongodb+srv://${USERNAME}:${PASSWORD}@commerceweb.4avmsvr.mongodb.net/?retryWrites=true&w=majority`
+
+Connection(USERNAME,PASSWORD);
 
 
-if(process.env.NODE_ENV==='production')
-{
-  app.use(express.static('client/build'));
-}
+// f(process.env.NODE_ENV==='production')
+// {
+//   app.use(express.static('client/build'));
+// }i
 app.listen(PORT,()=>
 {
     console.log(`server is running on port ${PORT}`);
@@ -71,6 +72,10 @@ paytmParams['MOBILE_NO'] = '1234567852'
 
 
 
+
+//  "client-install":"cd client && npm install",
+//     "client-build":"cd client && npm run build",
+//     "heroku-postbuild":"npm run client install && npm run client-build"
 
 
 

@@ -2,15 +2,13 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "client-install":"cd client && npm install",
-    "client-build":"cd client && npm run build",
-    "heroku-postbuild":"npm run client install && npm run client-build"
+    "test": "echo \"Error: no test specified\" && exit 1"
+   
 
 
   },
@@ -27,3 +25,6 @@
     "uuid": "^9.0.0"
   }
 }
+
+
+

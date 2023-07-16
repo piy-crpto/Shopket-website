@@ -5,11 +5,11 @@ import dotenv from 'dotenv';
 
 
 
-export const Connection = async(URL)=>
+export const Connection = async(user,pass)=>
 {   
    
 // console.log(USERNAME)
-    // const URL =  `mongodb+srv://${user}:${pass}@commerceweb.4avmsvr.mongodb.net/?retryWrites=true&w=majority`
+     const URL =  `mongodb+srv://${user}:${pass}@commerceweb.4avmsvr.mongodb.net/?retryWrites=true&w=majority`
      try{  
 
             await mongoose.connect(URL,{
